@@ -21,24 +21,32 @@ export const HeaderContainer = styled.header`
 
 export const Logo = styled(Image)`
   background-color: transparent;
-  width: 20vw;
+  width: 45%;
   height: auto;
+
+  @media (min-width: 1024px) {
+    width: 20%;
+  }
 `;
 
 export const Buttons = styled.div`
   display: flex;
   flex-direction: row;
-  width: 22vw;
+  width: 50%;
   background-color: transparent;
   align-items: center;
   justify-content: space-between;
 `;
 
 export const Button1 = styled(Button)`
-  width: 10vw;
+  width: 45%;
   height: 6vh;
-  font-size: ${px2vw(10, 1024)};
+  font-size: ${px2vw(10, 320)};
   color: white;
+
+  @media (min-width: 1024px) {
+    font-size: ${px2vw(10, 1024)};
+  }
 `;
 
 export const Button2 = styled(Button1)`
@@ -46,9 +54,8 @@ export const Button2 = styled(Button1)`
 `;
 
 export const NavBar = styled(Navbar)`
-  display: flex;
   height: 5vh;
-  background-color: red;
+  padding: 10px;
 `;
 
 export const NavContainer = styled(Container)`
@@ -61,14 +68,12 @@ export const NavFirst = styled(Nav)`
   align-items: center;
   height: 5vh;
   background-color: transparent;
-  margin-left: -5vw;
 `;
 
 export const NavSecond = styled(Nav)`
   align-items: center;
   height: 5vh;
   background-color: transparent;
-  margin-right: -5vw;
 `;
 
 export const Navlink = styled(NavLink)`

@@ -41,7 +41,7 @@ export const Description = styled.label`
 
 export const DetailsImg = styled(Image)`
   background-color: transparent;
-  width: 60%;
+  width: 20%;
   height: auto;
 `;
 

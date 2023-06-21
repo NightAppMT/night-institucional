@@ -13,7 +13,7 @@ export const Overlay = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 50vw;
+  width: 50%;
 `;
 
 export const Text = styled.text`
@@ -73,6 +73,7 @@ export const Form = styled.input`
   &::placeholder {
     color: ${({ theme }) => theme.color.primary_100};
   }
+  width: 20%;
 `;
 
 export const Label = styled.label`
