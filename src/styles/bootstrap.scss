@@ -1,4 +1,7 @@
-$danger: #000;
+@import "../node_modules/bootstrap/scss/functions";
+
+$primary: #ffff44;
+$secondary: #212121;
 
 //last
 @import "../../node_modules/bootstrap/scss/bootstrap.scss";
