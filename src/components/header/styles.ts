@@ -36,6 +36,9 @@ export const Buttons = styled.div`
   background-color: transparent;
   align-items: center;
   justify-content: space-between;
+  @media (min-width: 1024px) {
+    width: 20%;
+  }
 `;
 
 export const Button1 = styled(Button)`
@@ -44,6 +47,10 @@ export const Button1 = styled(Button)`
   font-size: ${px2vw(10, 320)};
   color: white;
 
+  @media (min-width: 768px) {
+    font-size: ${px2vw(10, 768)};
+  }
+
   @media (min-width: 1024px) {
     font-size: ${px2vw(10, 1024)};
   }
@@ -51,32 +58,4 @@ export const Button1 = styled(Button)`
 
 export const Button2 = styled(Button1)`
   color: black;
-`;
-
-export const NavBar = styled(Navbar)`
-  height: 5vh;
-  padding: 10px;
-`;
-
-export const NavContainer = styled(Container)`
-  display: flex;
-  height: 5vh;
-  background-color: transparent;
-`;
-
-export const NavFirst = styled(Nav)`
-  align-items: center;
-  height: 5vh;
-  background-color: transparent;
-`;
-
-export const NavSecond = styled(Nav)`
-  align-items: center;
-  height: 5vh;
-  background-color: transparent;
-`;
-
-export const Navlink = styled(NavLink)`
-  color: ${({ theme }) => theme.color.secondary_100};
-  font-weight: 700;
 `;

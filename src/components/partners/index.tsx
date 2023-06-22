@@ -7,6 +7,8 @@ import {
   Title,
 } from "./styles";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Autoplay } from "swiper";
+import { useEffect, useState } from "react";
 
 export function PartnersComponent() {
   const Slides = [
@@ -42,6 +44,16 @@ export function PartnersComponent() {
     },
   ];
 
+  const [width, setWidth] = useState(100);
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
   return (
     <Container>
       <Title>EMPRESAS QUE NOS APOIAM A TRABALHAR MAIS E MELHOR</Title>
@@ -51,11 +63,16 @@ export function PartnersComponent() {
       </Images>
       <SliderDiv>
         <Swiper
-          slidesPerView={6}
+          slidesPerView={width >= 768 ? 5 : 4}
           initialSlide={1}
           centeredSlides={true}
-          spaceBetween={0}
           loop={true}
+          modules={[FreeMode, Autoplay]}
+          freeMode={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           style={{ background: "#212121" }}
         >
           {Slides.map((item, index) => (

@@ -8,6 +8,10 @@ export const Container = styled.div`
   background-color: transparent;
   padding-top: 0.5%;
   padding-bottom: 5%;
+
+  @media (min-width: 768px) {
+    padding-bottom: 3%;
+  }
 `;
 
 export const Banner = styled(Image)`

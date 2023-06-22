@@ -3,7 +3,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode } from "swiper";
+import { FreeMode, Autoplay } from "swiper";
 
 export function CultureComponent() {
   const Slides = [
@@ -16,9 +16,9 @@ export function CultureComponent() {
     {
       name: "slide3",
     },
-    // {
-    //   name: "slide4",
-    // },
+    {
+      name: "slide4",
+    },
     {
       name: "slide1",
     },
@@ -27,6 +27,9 @@ export function CultureComponent() {
     },
     {
       name: "slide3",
+    },
+    {
+      name: "slide4",
     },
   ];
 
@@ -40,10 +43,13 @@ export function CultureComponent() {
             slidesPerView={3}
             initialSlide={1}
             centeredSlides={true}
-            spaceBetween={0}
             loop={true}
-            modules={[FreeMode]}
+            modules={[FreeMode, Autoplay]}
             freeMode={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: false,
+            }}
             style={{ background: "#212121" }}
           >
             {Slides.map((item, index) => (

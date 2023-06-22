@@ -1,3 +1,4 @@
+import px2vw from "@/utils/size";
 import Image from "next/image";
 import { styled } from "styled-components";
 
@@ -12,6 +13,17 @@ export const Container = styled.div`
 export const Title = styled.label`
   background-color: transparent;
   color: black;
+  font-weight: 700;
+  padding-bottom: 10px;
+  font-size: ${px2vw(20, 320)};
+
+  @media (min-width: 768px) {
+    font-size: ${px2vw(25, 768)};
+  }
+
+  @media (min-width: 1024px) {
+    font-size: ${px2vw(25, 1024)};
+  }
 `;
 
 export const Images = styled.div`
@@ -33,14 +45,24 @@ export const Venture = styled(Image)`
 
 export const Money = styled(Image)`
   background-color: transparent;
-  width: 40%;
+  width: 48%;
   height: auto;
-  margin-top: 5vh;
+  margin-top: 2vh;
+
+  @media (min-width: 768px) {
+    width: 40%;
+    margin-top: 5vh;
+  }
 `;
 
 export const Startup = styled(Image)`
   background-color: transparent;
-  width: 40%;
+  width: 48%;
   height: auto;
-  margin-top: 5vh;
+  margin-top: 2vh;
+
+  @media (min-width: 768px) {
+    width: 40%;
+    margin-top: 5vh;
+  }
 `;

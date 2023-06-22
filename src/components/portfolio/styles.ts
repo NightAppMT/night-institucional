@@ -1,3 +1,4 @@
+import px2vw from "@/utils/size";
 import Image from "next/image";
 import { styled } from "styled-components";
 
@@ -20,6 +21,18 @@ export const Title = styled.label`
   color: black;
   width: 90%;
   align-self: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: ${px2vw(15, 320)};
+
+  @media (min-width: 768px) {
+    font-size: ${px2vw(18, 768)};
+  }
+
+  @media (min-width: 1024px) {
+    font-size: ${px2vw(20, 1024)};
+  }
 `;
 
 export const SliderDiv = styled.div`
@@ -31,6 +44,10 @@ export const SliderDiv = styled.div`
 
 export const SliderImg = styled(Image)`
   background-color: transparent;
-  width: 15vw;
+  width: 85%;
   height: auto;
+
+  @media (min-width: 768px) {
+    width: 90%;
+  }
 `;

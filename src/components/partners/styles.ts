@@ -1,3 +1,4 @@
+import px2vw from "@/utils/size";
 import Image from "next/image";
 import { styled } from "styled-components";
 
@@ -14,6 +15,18 @@ export const Title = styled.label`
   color: white;
   width: 80%;
   align-self: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 700;
+  font-size: ${px2vw(15, 320)};
+
+  @media (min-width: 768px) {
+    font-size: ${px2vw(18, 768)};
+  }
+
+  @media (min-width: 1024px) {
+    font-size: ${px2vw(20, 1024)};
+  }
 `;
 
 export const Images = styled.div`
@@ -21,13 +34,22 @@ export const Images = styled.div`
   flex-direction: row;
   background-color: transparent;
   justify-content: space-evenly;
-  padding-bottom: 40px;
+  padding-bottom: 10px;
+
+  @media (min-width: 768px) {
+    padding-bottom: 40px;
+  }
 `;
 
 export const Fixed = styled(Image)`
   background-color: transparent;
-  width: 50%;
-  height: 35vh;
+  width: 40%;
+  height: 20vh;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    height: 35vh;
+  }
 `;
 
 export const SliderDiv = styled.div`
@@ -40,6 +62,6 @@ export const SliderDiv = styled.div`
 
 export const SliderImg = styled(Image)`
   background-color: transparent;
-  width: 15vw;
+  width: 90%;
   height: auto;
 `;

@@ -1,3 +1,4 @@
+import px2vw from "@/utils/size";
 import Image from "next/image";
 import { styled } from "styled-components";
 
@@ -13,6 +14,17 @@ export const Container = styled.div`
 export const Title = styled.label`
   color: white;
   background-color: transparent;
+  font-weight: 700;
+  padding-bottom: 10px;
+  font-size: ${px2vw(20, 320)};
+
+  @media (min-width: 768px) {
+    font-size: ${px2vw(25, 768)};
+  }
+
+  @media (min-width: 1024px) {
+    font-size: ${px2vw(25, 1024)};
+  }
 `;
 
 export const Img = styled(Image)`
@@ -26,12 +38,12 @@ export const MainDiv = styled.div`
   flex-direction: row;
   width: 100%;
   background-color: transparent;
+  justify-content: space-between;
 `;
 
 export const SliderDiv = styled.div`
   display: flex;
-  width: 73vw;
-  height: 52vh;
+  width: 75%;
   background-color: red;
 `;
 

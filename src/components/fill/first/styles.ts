@@ -1,11 +1,17 @@
 import Image from "next/image";
 import { styled } from "styled-components";
 import banner from "../../../../public/FillFirst.svg";
+import px2vw from "@/utils/size";
 
 export const Container = styled.div`
   display: flex;
+  flex-direction: column;
   background-color: ${({ theme }) => theme.color.primary_100};
   margin-bottom: 20px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const Overlay = styled.div`
@@ -13,7 +19,11 @@ export const Overlay = styled.div`
   align-items: center;
   justify-content: center;
   text-align: center;
-  width: 50%;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 50%;
+  }
 `;
 
 export const Text = styled.text`
@@ -21,6 +31,15 @@ export const Text = styled.text`
   background-color: transparent;
   color: white;
   z-index: 2;
+  font-size: ${px2vw(16, 320)};
+
+  @media (min-width: 768px) {
+    font-size: ${px2vw(20, 768)};
+  }
+
+  @media (min-width: 1024px) {
+    font-size: ${px2vw(25, 1024)};
+  }
 `;
 
 export const Img = styled(Image)`
@@ -33,16 +52,28 @@ export const Forms = styled.div`
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  width: 50%;
-  justify-content: space-evenly;
+  width: 90%;
+  align-self: center;
+
+  @media (max-width: 768px) {
+    padding-bottom: 10px;
+  }
+
+  @media (min-width: 768px) {
+    width: 50%;
+    height: max-content;
+  }
 `;
 
 export const NamePhone = styled.div`
   display: flex;
   flex-direction: row;
   background-color: transparent;
-  width: 100%;
-  justify-content: space-evenly;
+  justify-content: space-between;
+
+  @media (min-width: 768px) {
+    justify-content: space-evenly;
+  }
 `;
 
 export const Name = styled.div`
@@ -61,22 +92,44 @@ export const Email = styled.div`
   display: flex;
   flex-direction: column;
   background-color: transparent;
-  padding-left: 10vw;
-  padding-right: 10vw;
+  align-self: center;
+
+  @media (min-width: 1024px) {
+    margin-top: 3%;
+  }
 `;
 
 export const Form = styled.input`
   background-color: black;
   color: ${({ theme }) => theme.color.primary_100};
   border: 0;
-  border-radius: 5px;
+  border-radius: 10px;
   &::placeholder {
     color: ${({ theme }) => theme.color.primary_100};
   }
-  width: 20%;
+  width: 40vw;
+  padding: 5px;
+
+  @media (min-width: 768px) {
+    width: 20vw;
+  }
+
+  @media (min-width: 1024px) {
+    padding: 10px;
+  }
 `;
 
 export const Label = styled.label`
   background-color: transparent;
   color: black;
+  font-weight: 700;
+  font-size: ${px2vw(15, 320)};
+
+  @media (min-width: 768px) {
+    font-size: ${px2vw(18, 768)};
+  }
+
+  @media (min-width: 1024px) {
+    font-size: ${px2vw(20, 1024)};
+  }
 `;

@@ -1,5 +1,7 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Container, Logo, SliderDiv, SliderImg, Title } from "./styles";
+import { FreeMode, Autoplay } from "swiper";
+import { useEffect, useState } from "react";
 
 export function PortfolioComponent() {
   const Slides = [
@@ -15,9 +17,9 @@ export function PortfolioComponent() {
     {
       name: "truelife",
     },
-    // {
-    //   name: "trabalho",
-    // },
+    {
+      name: "trabalho",
+    },
     {
       name: "night",
     },
@@ -30,19 +32,37 @@ export function PortfolioComponent() {
     {
       name: "truelife",
     },
+    {
+      name: "trabalho",
+    },
   ];
+
+  const [width, setWidth] = useState(100);
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   return (
     <Container>
-      <Logo src={"/logo.svg"} width={1000} height={500} alt="" />
+      <Logo src={"/logoDark.svg"} width={1000} height={500} alt="" />
       <Title>UM POUCO DA NOSSA EXECUÇÃO</Title>
       <SliderDiv>
         <Swiper
-          slidesPerView={5}
+          slidesPerView={width >= 768 ? 5 : 4}
           initialSlide={1}
           centeredSlides={true}
-          spaceBetween={0}
           loop={true}
+          modules={[FreeMode, Autoplay]}
+          freeMode={true}
+          autoplay={{
+            delay: 3000,
+            disableOnInteraction: false,
+          }}
           style={{ background: "#FFFF44" }}
         >
           {Slides.map((item, index) => (

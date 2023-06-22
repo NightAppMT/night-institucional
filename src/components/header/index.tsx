@@ -1,23 +1,14 @@
-import { Navbar, Offcanvas } from "react-bootstrap";
+import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import {
   Button1,
   Button2,
   Buttons,
   HeaderContainer,
   Logo,
-  NavBar,
-  NavContainer,
-  Navlink,
-  NavFirst,
-  NavSecond,
   MainHeaderContainer,
 } from "./styles";
-import { useEffect, useState } from "react";
-import { useRouter } from "next/router";
 
 export function HeaderComponent() {
-  const [open, setOpen] = useState(false);
-
   return (
     <MainHeaderContainer>
       <HeaderContainer>
@@ -27,51 +18,71 @@ export function HeaderComponent() {
           <Button2 variant={"primary"}>SOU CLIENTE</Button2>
         </Buttons>
       </HeaderContainer>
-      <NavBar
-        style={{ zIndex: 10 }}
-        bg="primary"
-        variant="primary"
-        expand="xl"
-        collapseOnSelect
-      >
-        <NavContainer fluid>
+      <Navbar expand={"xl"} bg={"primary"}>
+        <Container
+          fluid
+          style={{
+            display: "flex",
+            background: "transparent",
+            height: "2vh",
+            alignItems: "center",
+            justifyContent: "space-between",
+          }}
+        >
           <Navbar.Toggle
-            onClick={() => setOpen(true)}
             style={{
               scale: "50%",
-              transform: "translate(-50%, -50%)",
-              marginTop: "-1vh",
+              transform: "translate(-70%, -70%)",
             }}
           />
           <Navbar.Offcanvas
-            style={{ height: "max-content" }}
-            placement="left"
-            show={open}
-            onHide={() => setOpen(false)}
+            placement="end"
+            style={{
+              width: "70%",
+              background: "#ffff44",
+              border: 0,
+            }}
           >
+            <Offcanvas.Header closeButton style={{ background: "#212121" }} />
             <Offcanvas.Body
               style={{
-                display: "flex",
-                justifyContent: "space-between",
                 background: "transparent",
+                paddingLeft: "1vw",
+                paddingRight: "1vw",
               }}
             >
-              <NavFirst>
-                <Navlink style={{ fontSize: 15 }}>Sobre Nós</Navlink>
-                <Navlink style={{ fontSize: 15 }}>Para Você</Navlink>
-                <Navlink style={{ fontSize: 15 }}>Para Empresas</Navlink>
-                <Navlink style={{ fontSize: 15 }}>Portfólio</Navlink>
-                <Navlink style={{ fontSize: 15 }}>Eventos</Navlink>
-              </NavFirst>
-              <NavSecond>
-                <Navlink style={{ fontSize: 15 }}>Parcerias</Navlink>
-                <Navlink style={{ fontSize: 15 }}>Instagram</Navlink>
-                <Navlink style={{ fontSize: 15 }}>YouTube</Navlink>
-              </NavSecond>
+              <Nav
+                className="flex-grow-1 justify-content-start"
+                style={{
+                  background: "transparent",
+                  alignItems: "center",
+                  color: "#212121",
+                  fontWeight: 700,
+                }}
+              >
+                <Nav.Link>Sobre Nós</Nav.Link>
+                <Nav.Link>Para Você</Nav.Link>
+                <Nav.Link>Para Empresas</Nav.Link>
+                <Nav.Link>Portfólio</Nav.Link>
+                <Nav.Link>Eventos</Nav.Link>
+              </Nav>
+              <Nav
+                className="flex-grow-1 justify-content-end"
+                style={{
+                  background: "transparent",
+                  alignItems: "center",
+                  color: "#212121",
+                  fontWeight: 700,
+                }}
+              >
+                <Nav.Link>Parcerias</Nav.Link>
+                <Nav.Link>Instagram</Nav.Link>
+                <Nav.Link>YouTube</Nav.Link>
+              </Nav>
             </Offcanvas.Body>
           </Navbar.Offcanvas>
-        </NavContainer>
-      </NavBar>
+        </Container>
+      </Navbar>
     </MainHeaderContainer>
   );
 }

@@ -1,3 +1,4 @@
+import px2vw from "@/utils/size";
 import Image from "next/image";
 import { styled } from "styled-components";
 
@@ -15,8 +16,12 @@ export const Container = styled.div`
 
 export const AboutUsImage = styled(Image)`
   background-color: transparent;
-  width: 30%;
+  width: 40%;
   height: auto;
+
+  @media (min-width: 768px) {
+    width: 30%;
+  }
 `;
 
 export const Details = styled.div`
@@ -29,20 +34,39 @@ export const Details = styled.div`
 export const Single = styled.div`
   background-color: transparent;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
 `;
 
 export const Description = styled.label`
   background-color: transparent;
+  line-height: 1;
+  font-size: ${px2vw(10, 320)};
+
+  @media (min-width: 768px) {
+    font-size: ${px2vw(15, 768)};
+  }
+
+  @media (min-width: 1024px) {
+    font-size: ${px2vw(20, 1024)};
+  }
 `;
 
 export const DetailsImg = styled(Image)`
   background-color: transparent;
-  width: 20%;
+  width: 70%;
   height: auto;
+
+  @media (min-width: 768px) {
+    width: 60%;
+  }
 `;
 
 export const Strong = styled.strong`
