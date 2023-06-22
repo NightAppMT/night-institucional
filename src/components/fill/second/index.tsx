@@ -17,8 +17,8 @@ import {
 export function FillSecond() {
   return (
     <>
-      <Title>PRÓXIMOS EVENTOS</Title>
-      <Container>
+      <Title className="bold">PRÓXIMOS EVENTOS</Title>
+      <Container id="event" className="bold">
         <Overlay>
           <Text>
             SE INSCREVA AO LADO E SAIBA MAIS DOS EVENTOS PRESENCIAIS E ONLINE

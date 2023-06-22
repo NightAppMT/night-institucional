@@ -17,7 +17,6 @@ export const Title = styled.label`
   align-self: center;
   padding-top: 10px;
   padding-bottom: 10px;
-  font-weight: 700;
   font-size: ${px2vw(15, 320)};
 
   @media (min-width: 768px) {

@@ -122,7 +122,6 @@ export const Form = styled.input`
 export const Label = styled.label`
   background-color: transparent;
   color: black;
-  font-weight: 700;
   font-size: ${px2vw(15, 320)};
 
   @media (min-width: 768px) {

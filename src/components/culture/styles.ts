@@ -14,7 +14,6 @@ export const Container = styled.div`
 export const Title = styled.label`
   color: white;
   background-color: transparent;
-  font-weight: 700;
   padding-bottom: 10px;
   font-size: ${px2vw(20, 320)};
 
@@ -29,8 +28,12 @@ export const Title = styled.label`
 
 export const Img = styled(Image)`
   background-color: transparent;
-  width: 20vw;
+  width: 45%;
   height: auto;
+
+  @media (min-width: 1024px) {
+    width: 20%;
+  }
 `;
 
 export const MainDiv = styled.div`
@@ -43,12 +46,20 @@ export const MainDiv = styled.div`
 
 export const SliderDiv = styled.div`
   display: flex;
-  width: 75%;
+  width: 50%;
   background-color: red;
+
+  @media (min-width: 1024px) {
+    width: 75%;
+  }
 `;
 
 export const SliderImg = styled(Image)`
   background-color: transparent;
-  width: 20vw;
+  width: 90%;
   height: auto;
+
+  @media (min-width: 1024px) {
+    width: 80%;
+  }
 `;

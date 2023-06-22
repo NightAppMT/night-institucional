@@ -48,12 +48,12 @@ export function PortfolioComponent() {
   }, []);
 
   return (
-    <Container>
+    <Container id="portfolio" className="bold">
       <Logo src={"/logoDark.svg"} width={1000} height={500} alt="" />
       <Title>UM POUCO DA NOSSA EXECUÇÃO</Title>
       <SliderDiv>
         <Swiper
-          slidesPerView={width >= 768 ? 5 : 4}
+          slidesPerView={width >= 768 ? 5 : 2}
           initialSlide={1}
           centeredSlides={true}
           loop={true}

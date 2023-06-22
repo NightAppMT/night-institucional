@@ -4,6 +4,7 @@ import "swiper/css/free-mode";
 import Image from "next/image";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Autoplay } from "swiper";
+import { useEffect, useState } from "react";
 
 export function CultureComponent() {
   const Slides = [
@@ -33,14 +34,25 @@ export function CultureComponent() {
     },
   ];
 
+  const [width, setWidth] = useState(100);
+
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
+
   return (
-    <Container>
+    <Container id={"aboutUs"} className="bold">
       <Title>NOSSA CULTURA</Title>
       <MainDiv>
         <Img src={"/cultureSliderFixed.svg"} width={500} height={1000} alt="" />
         <SliderDiv>
           <Swiper
-            slidesPerView={3}
+            slidesPerView={width >= 768 ? 3 : 1}
             initialSlide={1}
             centeredSlides={true}
             loop={true}

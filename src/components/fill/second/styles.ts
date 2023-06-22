@@ -6,6 +6,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   background-color: black;
+  margin-bottom: 20px;
 
   @media (min-width: 768px) {
     flex-direction: row;
@@ -138,7 +139,6 @@ export const Form = styled.input`
 export const Label = styled.label`
   background-color: transparent;
   color: ${({ theme }) => theme.color.primary_100};
-  font-weight: 700;
   font-size: ${px2vw(15, 320)};
 
   @media (min-width: 768px) {

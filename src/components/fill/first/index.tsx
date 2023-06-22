@@ -15,7 +15,7 @@ import {
 
 export function FillFirst() {
   return (
-    <Container>
+    <Container className="bold">
       <Overlay>
         <Text>
           QUER FALAR DIRETAMENTE CONOSCO?

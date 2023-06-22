@@ -6,17 +6,18 @@ export const Container = styled.div`
   align-items: center;
   justify-content: center;
   background-color: transparent;
-  padding-top: 0.5%;
+  padding-top: 30%;
   padding-bottom: 5%;
 
   @media (min-width: 768px) {
+    padding-top: 10%;
     padding-bottom: 3%;
   }
 `;
 
 export const Banner = styled(Image)`
   background-color: transparent;
-  width: 95%;
+  width: 90%;
   height: auto;
   align-self: center;
 `;

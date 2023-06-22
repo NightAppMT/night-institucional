@@ -55,7 +55,7 @@ export function PartnersComponent() {
   }, []);
 
   return (
-    <Container>
+    <Container id="partners" className="bold">
       <Title>EMPRESAS QUE NOS APOIAM A TRABALHAR MAIS E MELHOR</Title>
       <Images>
         <Fixed src={"/prospere.svg"} width={1000} height={500} alt="" />

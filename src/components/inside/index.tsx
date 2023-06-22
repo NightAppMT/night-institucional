@@ -2,7 +2,7 @@ import { Container, Images, Money, Startup, Title, Venture } from "./styles";
 
 export function InsideComponent() {
   return (
-    <Container>
+    <Container className="bold">
       <Images>
         <Title>FIQUE POR DENTRO</Title>
         <Venture src={"/venture.svg"} width={1500} height={1000} alt="" />

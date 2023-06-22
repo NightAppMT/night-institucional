@@ -8,12 +8,12 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.color.primary_100};
   width: 100%;
   align-self: center;
+  padding: 10px;
 `;
 
 export const Title = styled.label`
   background-color: transparent;
   color: black;
-  font-weight: 700;
   padding-bottom: 10px;
   font-size: ${px2vw(20, 320)};
 
