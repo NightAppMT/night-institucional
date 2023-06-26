@@ -106,6 +106,7 @@ export const Form = styled.input`
   border-radius: 10px;
   &::placeholder {
     color: ${({ theme }) => theme.color.primary_100};
+    
   }
   width: 40vw;
   padding: 5px;

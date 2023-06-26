@@ -66,3 +66,7 @@ export const Button1 = styled(Button)`
 `;
 
 export const Button2 = styled(Button1)``;
+
+export const A = styled.a`
+background-color: transparent
+`

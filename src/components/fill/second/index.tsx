@@ -29,16 +29,16 @@ export function FillSecond() {
           <NamePhone>
             <Name>
               <Label>NOME</Label>
-              <Form placeholder="Nome:" />
+              <Form placeholder="Nome:" className="bold"/>
             </Name>
             <Phone>
               <Label>TELEFONE</Label>
-              <Form placeholder="Telefone:" />
+              <Form placeholder="Telefone:" className="bold"/>
             </Phone>
           </NamePhone>
           <Email>
             <Label>SEU MELHOR EMAIL</Label>
-            <Form placeholder="Email:" />
+            <Form placeholder="Email:" className="bold"/>
           </Email>
         </Forms>
       </Container>

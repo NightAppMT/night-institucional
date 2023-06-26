@@ -11,6 +11,7 @@ import { CultureComponent } from "@/components/culture";
 import { FillSecond } from "@/components/fill/second";
 import { PortfolioComponent } from "@/components/portfolio";
 import { PartnersComponent } from "@/components/partners";
+import { FooterComponent } from "@/components/footer";
 
 export default function Home() {
   return (
@@ -50,6 +51,7 @@ export default function Home() {
         }}
       />
       <PartnersComponent />
+      <FooterComponent />
     </Container>
   );
 }

@@ -52,7 +52,7 @@ export function CultureComponent() {
         <Img src={"/cultureSliderFixed.svg"} width={500} height={1000} alt="" />
         <SliderDiv>
           <Swiper
-            slidesPerView={width >= 768 ? 3 : 1}
+            slidesPerView={width >= 1024 ? 3 : 1}
             initialSlide={1}
             centeredSlides={true}
             loop={true}

@@ -1,5 +1,6 @@
 import { Container, Nav, Navbar, Offcanvas } from "react-bootstrap";
 import {
+  A,
   Button1,
   Button2,
   Buttons,
@@ -28,7 +29,7 @@ export function HeaderComponent() {
     let url = window.location.href.split("/");
     let target = url[url.length - 1].toLowerCase();
     let element = document.getElementById(target);
-    element && element.scrollIntoView({ behavior: "smooth", block: "start" });
+    element && element.scrollIntoView();
   }, []);
 
   const router = useRouter();
@@ -134,8 +135,8 @@ export function HeaderComponent() {
                   >
                     Sobre Nós
                   </Nav.Link>
-                  <Nav.Link>Para Você</Nav.Link>
-                  <Nav.Link>Para Empresas</Nav.Link>
+                  <Nav.Link onClick={() => router.push("/you")}>Para Você</Nav.Link>       
+                  <Nav.Link onClick={() => router.push("/business")}>Para Empresas</Nav.Link>
                   <Nav.Link
                     onClick={() => {
                       setOpen(false);
@@ -184,8 +185,10 @@ export function HeaderComponent() {
                   >
                     Parcerias
                   </Nav.Link>
-                  <Nav.Link>Instagram</Nav.Link>
-                  <Nav.Link>YouTube</Nav.Link>
+                  <Nav.Link href="https://www.instagram.com/executivosdigital/" target="blank" rel="noreferrer">
+                    Instagram
+                    </Nav.Link>
+                  <Nav.Link href="https://www.youtube.com/channel/UCVFy7eMtp3ngA0MGoCYlAmw" target="blank" rel="noreferrer">YouTube</Nav.Link>
                 </Nav>
               </Offcanvas.Body>
             </Navbar.Offcanvas>
