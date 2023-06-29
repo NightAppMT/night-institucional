@@ -12,8 +12,16 @@ import {
   Phone,
   Text,
 } from "./styles";
+import { maskPhone } from "@/utils/masks";
+import { useState } from "react";
 
 export function FillFirst() {
+  const [formData, setFormData] = useState({
+    name: "",
+    mobilePhone: "",
+    email: ""
+  })
+  console.log(formData)
   return (
     <Container className="bold">
       <Overlay>
@@ -27,16 +35,16 @@ export function FillFirst() {
         <NamePhone>
           <Name>
             <Label>NOME</Label>
-            <Form placeholder="Nome:" className="bold"/>
+            <Form placeholder="Nome:" className="bold" onChange={(e) => setFormData({...formData, name: e.target.value})} value={formData.name} />
           </Name>
           <Phone>
             <Label>TELEFONE</Label>
-            <Form placeholder="Telefone:" className="bold" />
+            <Form placeholder="Telefone:" className="bold" maxLength={14} onChange={(e) => setFormData({...formData, mobilePhone: maskPhone(e.target.value)})} value={formData.mobilePhone}/>
           </Phone>
         </NamePhone>
         <Email>
           <Label>SEU MELHOR EMAIL</Label>
-          <Form placeholder="Email:" className="bold"/>
+          <Form placeholder="Email:" className="bold" onChange={(e) => setFormData({...formData, email: e.target.value})}/>
         </Email>
       </Forms>
     </Container>
