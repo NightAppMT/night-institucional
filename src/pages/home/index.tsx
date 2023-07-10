@@ -1,17 +1,16 @@
 import { Button } from "react-bootstrap";
 import { Container } from "./styles";
-import { HeaderComponent } from "@/components/header";
-import Theme from "@/styles/themes";
-import { BannerComponent } from "@/components/banner";
-import { FillFirst } from "@/components/fill/first";
-import { InsideComponent } from "@/components/inside";
+import { InsideComponent } from "@/components/Home/inside";
 import Image from "next/image";
-import { AboutUsComponent } from "@/components/aboutus";
-import { CultureComponent } from "@/components/culture";
-import { FillSecond } from "@/components/fill/second";
-import { PortfolioComponent } from "@/components/portfolio";
-import { PartnersComponent } from "@/components/partners";
-import { FooterComponent } from "@/components/footer";
+import { PortfolioComponent } from "@/components/Home/portfolio";
+import { PartnersComponent } from "@/components/Home/partners";
+import { FooterComponent } from "@/components/Global/footer";
+import { HeaderComponent } from "@/components/Global/header";
+import { BannerComponent } from "@/components/Home/banner";
+import { FillFirst } from "@/components/Home/fill/first";
+import { AboutUsComponent } from "@/components/Home/aboutus";
+import { CultureComponent } from "@/components/Home/culture";
+import { FillSecond } from "@/components/Home/fill/second";
 
 export default function Home() {
   return (
