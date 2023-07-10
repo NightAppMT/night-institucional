@@ -1,4 +1,3 @@
-import { Button } from "react-bootstrap";
 import { Container } from "./styles";
 import { InsideComponent } from "@/components/Home/inside";
 import Image from "next/image";
@@ -11,10 +10,14 @@ import { FillFirst } from "@/components/Home/fill/first";
 import { AboutUsComponent } from "@/components/Home/aboutus";
 import { CultureComponent } from "@/components/Home/culture";
 import { FillSecond } from "@/components/Home/fill/second";
+import { useState } from "react";
 
 export default function Home() {
+
+
   return (
     <Container>
+
       <HeaderComponent />
       <BannerComponent />
       <FillFirst />

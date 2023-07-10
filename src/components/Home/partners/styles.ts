@@ -30,10 +30,11 @@ export const Title = styled.label`
 
 export const Images = styled.div`
   display: flex;
-  flex-direction: row;
+flex-wrap: wrap;
   background-color: transparent;
   justify-content: space-evenly;
-  padding-bottom: 10px;
+  padding: 0;
+  margin: 0;
 
   @media (min-width: 768px) {
     padding-bottom: 40px;
@@ -43,13 +44,17 @@ export const Images = styled.div`
 export const Fixed = styled(Image)`
   background-color: transparent;
   width: 40%;
-  height: 20vh;
+  height: 15vh;
   border-radius: 20px;
-  margin: 10px;
 
   @media (min-width: 768px) {
-    width: 100%;
-    height: 35vh;
+    width: 25%;
+    height: 15vh;
+  }
+
+  @media (min-width: 1024px) {
+    width: 30%;
+    height: 30vh
   }
 `;
 

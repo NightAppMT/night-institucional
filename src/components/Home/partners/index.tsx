@@ -58,7 +58,7 @@ export function PartnersComponent() {
     <Container id="partners" className="bold">
       <Title>EMPRESAS QUE NOS APOIAM A TRABALHAR MAIS E MELHOR</Title>
       <Images>
-        <Fixed src={"/amazonik.png"} width={1000} height={500} alt="" />
+        <Fixed src={"/amazonik.svg"} width={1000} height={500} alt="" />
         <Fixed src={"/prospere.svg"} width={1000} height={500} alt="" />
         <Fixed src={"/safra.svg"} width={1000} height={500} alt="" />
       </Images>
