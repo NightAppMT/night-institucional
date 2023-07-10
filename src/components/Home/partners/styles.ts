@@ -30,7 +30,7 @@ export const Title = styled.label`
 
 export const Images = styled.div`
   display: flex;
-flex-wrap: wrap;
+  flex-wrap: wrap;
   background-color: transparent;
   justify-content: space-evenly;
   padding: 0;
@@ -54,7 +54,8 @@ export const Fixed = styled(Image)`
 
   @media (min-width: 1024px) {
     width: 30%;
-    height: 30vh
+    height: 30vh;
+    margin-top: 10px;
   }
 `;
 

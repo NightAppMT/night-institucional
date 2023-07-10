@@ -12,9 +12,9 @@ import { useEffect, useState } from "react";
 
 export function PartnersComponent() {
   const Slides = [
-    // {
-    //   name: "truelifeLogo",
-    // },
+    {
+      name: "truelifeFixed",
+    },
     {
       name: "centelhaLogo",
     },
@@ -27,9 +27,18 @@ export function PartnersComponent() {
     {
       name: "asaasLogo",
     },
-    // {
-    //   name: "truelifeLogo",
-    // },
+    {
+      name: "siga",
+    },
+    {
+      name: "aws",
+    },
+    {
+      name: "neoads",
+    },
+    {
+      name: "truelifeFixed",
+    },
     {
       name: "centelhaLogo",
     },
@@ -41,6 +50,15 @@ export function PartnersComponent() {
     },
     {
       name: "asaasLogo",
+    },
+    {
+      name: "siga",
+    },
+    {
+      name: "aws",
+    },
+    {
+      name: "neoads",
     },
   ];
 
