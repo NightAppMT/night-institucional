@@ -7,7 +7,6 @@ export const Container = styled.div`
   flex-direction: column;
   background-color: #ffff44;
   align-items: center;
-  padding-top: 10px;
   padding-bottom: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -33,7 +32,7 @@ export const Text = styled.div`
   background-color: transparent;
   align-items: center;
   justify-content: space-between;
-  margin-top: 2%;
+  margin-top: 1%;
 `;
 
 export const PolTerms = styled.div`
