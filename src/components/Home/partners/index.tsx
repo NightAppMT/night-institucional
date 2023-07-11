@@ -1,3 +1,6 @@
+import { useEffect, useState } from "react";
+import { Autoplay, FreeMode } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Container,
   Fixed,
@@ -6,9 +9,6 @@ import {
   SliderImg,
   Title,
 } from "./styles";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Autoplay } from "swiper";
-import { useEffect, useState } from "react";
 
 export function PartnersComponent() {
   const Slides = [
@@ -78,7 +78,7 @@ export function PartnersComponent() {
       <Images>
         <Fixed src={"/amazonik.svg"} width={1000} height={500} alt="" />
         <Fixed src={"/prospere.svg"} width={1000} height={500} alt="" />
-        <Fixed src={"/safra.svg"} width={1000} height={500} alt="" />
+        {/* <Fixed src={"/safra.svg"} width={1000} height={500} alt="" /> */}
       </Images>
       <SliderDiv>
         <Swiper
