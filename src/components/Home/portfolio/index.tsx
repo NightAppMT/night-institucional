@@ -6,34 +6,34 @@ import { useEffect, useState } from "react";
 export function PortfolioComponent() {
   const Slides = [
     {
-      name: "night",
+      name: "curaecia",
+    },
+    {
+      name: "escolavida",
+    },
+    {
+      name: "fernandescontaldi",
     },
     {
       name: "juridia",
     },
     {
-      name: "pagagil",
-    },
-    {
-      name: "truelife",
-    },
-    {
-      name: "trabalho",
+      name: "lapmec",
     },
     {
       name: "night",
     },
     {
-      name: "juridia",
-    },
-    {
       name: "pagagil",
     },
     {
-      name: "truelife",
+      name: "petstyle",
     },
     {
       name: "trabalho",
+    },
+    {
+      name: "truelife",
     },
   ];
 
@@ -68,9 +68,11 @@ export function PortfolioComponent() {
           {Slides.map((item, index) => (
             <SwiperSlide style={{ background: "#FFFF44" }}>
               <SliderImg
-                src={require("../../../../public/" + item.name + ".svg")}
-                width={500}
-                height={1000}
+                src={require("../../../../public/Portfolio/" +
+                  item.name +
+                  ".svg")}
+                width={250}
+                height={500}
                 alt=""
               />
             </SwiperSlide>

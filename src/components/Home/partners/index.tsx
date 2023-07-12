@@ -13,7 +13,10 @@ import {
 export function PartnersComponent() {
   const Slides = [
     {
-      name: "truelifeFixed",
+      name: "asaasLogo",
+    },
+    {
+      name: "aws",
     },
     {
       name: "centelhaLogo",
@@ -25,19 +28,19 @@ export function PartnersComponent() {
       name: "mongoLogo",
     },
     {
-      name: "asaasLogo",
+      name: "neoads",
     },
     {
       name: "siga",
     },
     {
-      name: "aws",
-    },
-    {
-      name: "neoads",
-    },
-    {
       name: "truelifeFixed",
+    },
+    {
+      name: "asaasLogo",
+    },
+    {
+      name: "aws",
     },
     {
       name: "centelhaLogo",
@@ -49,16 +52,13 @@ export function PartnersComponent() {
       name: "mongoLogo",
     },
     {
-      name: "asaasLogo",
+      name: "neoads",
     },
     {
       name: "siga",
     },
     {
-      name: "aws",
-    },
-    {
-      name: "neoads",
+      name: "truelifeFixed",
     },
   ];
 
@@ -76,9 +76,9 @@ export function PartnersComponent() {
     <Container id="partners" className="bold">
       <Title>EMPRESAS QUE NOS APOIAM A TRABALHAR MAIS E MELHOR</Title>
       <Images>
-        <Fixed src={"/amazonik.svg"} width={1000} height={500} alt="" />
-        <Fixed src={"/prospere.svg"} width={1000} height={500} alt="" />
-        {/* <Fixed src={"/safra.svg"} width={1000} height={500} alt="" /> */}
+        <Fixed src={"/Partners/amazonik.svg"} width={500} height={250} alt="" />
+        <Fixed src={"/Partners/prospere.svg"} width={500} height={250} alt="" />
+        <Fixed src={"/Partners/safra.svg"} width={500} height={250} alt="" />
       </Images>
       <SliderDiv>
         <Swiper
@@ -97,9 +97,11 @@ export function PartnersComponent() {
           {Slides.map((item, index) => (
             <SwiperSlide style={{ background: "#212121" }}>
               <SliderImg
-                src={require("../../../../public/" + item.name + ".svg")}
-                width={500}
-                height={1000}
+                src={require("../../../../public/Partners/" +
+                  item.name +
+                  ".svg")}
+                width={250}
+                height={200}
                 alt=""
               />
             </SwiperSlide>

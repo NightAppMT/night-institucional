@@ -20,6 +20,10 @@ export const Banner = styled(Image)`
   width: 90%;
   height: auto;
   align-self: center;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 0;
+
+  @media (min-width: 768px) {
+    border-radius: 20px;
+  }
 `;
