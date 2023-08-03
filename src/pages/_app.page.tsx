@@ -15,6 +15,10 @@ function MyApp({ Component, pageProps }: any) {
     <>
       <Head>
         <title>Ex.Digital</title>
+        <meta
+          name="facebook-domain-verification"
+          content="er1amkpxu8vlm8acpg6c48mywp8ypj"
+        />
       </Head>
       <ThemeProvider theme={Theme}>
         <GlobalStyle />
