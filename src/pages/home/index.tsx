@@ -61,7 +61,7 @@ export default function Home() {
       />
       <PartnersComponent />
       <FooterComponent />
-      <div
+      {/* <div
         style={{
           display: "flex",
           width: "100vw",
@@ -87,7 +87,7 @@ export default function Home() {
             />
           </>
         )}
-      </div>
+      </div> */}
     </Container>
   );
 }
