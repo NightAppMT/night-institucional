@@ -25,9 +25,9 @@ export default function Home() {
   }, []);
   return (
     <Container>
-      {/* <HeaderComponent />
+      {/* <HeaderComponent /> */}
       <BannerComponent />
-      <FillFirst />
+      {/* <FillFirst />
       <InsideComponent />
       <Image
         src={"/logo.svg"}
@@ -61,7 +61,7 @@ export default function Home() {
       />
       <PartnersComponent />
       <FooterComponent /> */}
-      <div
+      {/* <div
         style={{
           display: "flex",
           width: "100vw",
@@ -87,7 +87,7 @@ export default function Home() {
             />
           </>
         )}
-      </div>
+      </div> */}
     </Container>
   );
 }
