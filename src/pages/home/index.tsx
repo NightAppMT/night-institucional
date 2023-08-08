@@ -25,7 +25,7 @@ export default function Home() {
   }, []);
   return (
     <Container>
-      <HeaderComponent />
+      {/* <HeaderComponent />
       <BannerComponent />
       <FillFirst />
       <InsideComponent />
@@ -60,8 +60,8 @@ export default function Home() {
         }}
       />
       <PartnersComponent />
-      <FooterComponent />
-      {/* <div
+      <FooterComponent /> */}
+      <div
         style={{
           display: "flex",
           width: "100vw",
@@ -87,7 +87,7 @@ export default function Home() {
             />
           </>
         )}
-      </div> */}
+      </div>
     </Container>
   );
 }
