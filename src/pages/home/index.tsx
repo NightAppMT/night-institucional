@@ -61,7 +61,13 @@ export default function Home() {
       />
       <PartnersComponent />
       <FooterComponent /> */}
-      <div style={{ background: "red" }}>
+      <div
+        style={{
+          display: "flex",
+          width: "100vw",
+          height: "100vh",
+        }}
+      >
         {width < 768 ? (
           <>
             <Image
