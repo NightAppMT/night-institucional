@@ -10,11 +10,22 @@ import { PartnersComponent } from "@/components/Home/partners";
 import { PortfolioComponent } from "@/components/Home/portfolio";
 import Image from "next/image";
 import { Container } from "./styles";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+  const [width, setWidth] = useState(100);
+
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
   return (
     <Container>
-      <HeaderComponent />
+      {/* <HeaderComponent />
       <BannerComponent />
       <FillFirst />
       <InsideComponent />
@@ -49,7 +60,28 @@ export default function Home() {
         }}
       />
       <PartnersComponent />
-      <FooterComponent />
+      <FooterComponent /> */}
+      <div style={{ background: "red" }}>
+        {width < 768 ? (
+          <>
+            <Image
+              src="/maintenance1.svg"
+              fill
+              alt=""
+              style={{ objectFit: "contain", background: "#212121" }}
+            />
+          </>
+        ) : (
+          <>
+            <Image
+              src="/maintenance.svg"
+              fill
+              alt=""
+              style={{ objectFit: "contain", background: "#212121" }}
+            />
+          </>
+        )}
+      </div>
     </Container>
   );
 }

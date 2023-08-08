@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import "../styles/bootstrap.scss";
 import GlobalStyle from "@/styles/global";
 import { ThemeProvider } from "styled-components";
 import Theme from "@/styles/themes";
 import Head from "next/head";
+import Image from "next/image";
 
 function MyApp({ Component, pageProps }: any) {
   useEffect(() => {
@@ -11,6 +12,16 @@ function MyApp({ Component, pageProps }: any) {
     import("bootstrap/dist/js/bootstrap");
   }, []);
 
+  const [width, setWidth] = useState(100);
+
+  const updateDimensions = () => {
+    setWidth(window.innerWidth);
+  };
+  useEffect(() => {
+    setWidth(window.innerWidth);
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
   return (
     <>
       <Head>
