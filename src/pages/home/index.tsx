@@ -75,15 +75,17 @@ export default function Home() {
               fill
               alt=""
               style={{ objectFit: "contain", background: "#212121" }}
+              priority
             />
           </>
         ) : (
           <>
             <Image
-              src="/maintenance.svg"
+              src="/maintenanceTest.svg"
               fill
               alt=""
               style={{ objectFit: "contain", background: "#212121" }}
+              priority
             />
           </>
         )}
